@@ -24,7 +24,7 @@ public:
 	float MovementRate;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TArray<URobotInstruction*> Instructions;
+	TArray<TSubclassOf<URobotInstruction>> Instructions;
 
 protected:
 	UFUNCTION(BlueprintCallable)
