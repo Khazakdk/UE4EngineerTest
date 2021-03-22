@@ -15,5 +15,5 @@ public:
 	URobotInstruction();	
 
 	UFUNCTION(BlueprintCallable)
-		bool ExecuteInstruction();
+	virtual bool ExecuteInstruction(APawn* TargetPawn);
 };

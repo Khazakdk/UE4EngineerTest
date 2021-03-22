@@ -7,7 +7,7 @@ URobotInstruction::URobotInstruction()
 	
 }
 
-bool URobotInstruction::ExecuteInstruction()
+bool URobotInstruction::ExecuteInstruction(APawn* TargetPawn)
 {
 	return true;
 }
