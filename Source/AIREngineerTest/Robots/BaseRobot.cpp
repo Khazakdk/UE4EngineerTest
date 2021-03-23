@@ -8,8 +8,13 @@ ABaseRobot::ABaseRobot()
 {
   this->MovementRate = 100.0;
   this->RobotMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("RobotMesh"));
-  this->RootComponent = RobotMesh;
+  this->RootComponent = this->RobotMesh;
   //this->RobotController = CreateDefaultSubobject<AAIController>(TEXT("RobotController"));
+}
+
+void ABaseRobot::BeginPlay()
+{
+  this->RunInstructions();
 }
 
 void ABaseRobot::WalkForward()

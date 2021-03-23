@@ -17,6 +17,8 @@ public:
 	// Sets default values for this pawn's properties
 	ABaseRobot();
 
+	void BeginPlay() override;
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	USkeletalMeshComponent* RobotMesh;
 
