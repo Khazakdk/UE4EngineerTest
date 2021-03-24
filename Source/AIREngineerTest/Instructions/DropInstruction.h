@@ -14,5 +14,5 @@ class AIRENGINEERTEST_API UDropInstruction : public URobotInstruction
 {
 	GENERATED_BODY()
 	
-	bool ExecuteInstruction(APawn* TargetPawn) override;
+	bool ExecuteInstruction(APawn* TargetPawn, FString Options) override;
 };

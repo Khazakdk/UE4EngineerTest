@@ -32,8 +32,8 @@ void ABaseRobot::RunInstructions()
 {  
   if (this->Instructions.IsValidIndex(0))
   {
-    URobotInstruction* newInstruction = NewObject<URobotInstruction>(this, Instructions[0]);
-    if (newInstruction->ExecuteInstruction(this))
+    URobotInstruction* newInstruction = NewObject<URobotInstruction>(this, Instructions[0].Instruction);
+    if (newInstruction->ExecuteInstruction(this, Instructions[0].Options))
     {
       FTimerHandle handle;
       GetWorld()->GetTimerManager().SetTimer(handle, [this]() 

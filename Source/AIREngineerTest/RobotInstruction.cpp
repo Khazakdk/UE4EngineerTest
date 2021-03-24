@@ -7,7 +7,7 @@ URobotInstruction::URobotInstruction()
 	
 }
 
-bool URobotInstruction::ExecuteInstruction(APawn* TargetPawn)
+bool URobotInstruction::ExecuteInstruction(APawn* TargetPawn, FString Options)
 {
 	return true;
 }

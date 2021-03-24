@@ -15,7 +15,7 @@ class AIRENGINEERTEST_API UDocumentInstruction : public URobotInstruction
 {
 	GENERATED_BODY()
 	
-	bool ExecuteInstruction(APawn* TargetPawn) override;
+	bool ExecuteInstruction(APawn* TargetPawn, FString Options) override;
 
 protected:
 	void CreateReport(TArray<AActor*> actors, int reportNumber);

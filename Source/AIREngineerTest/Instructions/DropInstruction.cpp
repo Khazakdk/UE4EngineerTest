@@ -5,7 +5,7 @@
 #include "Kismet\KismetSystemLibrary.h"
 #include "..\Robots\IDropperActor.h"
 
-bool UDropInstruction::ExecuteInstruction(APawn* TargetPawn)
+bool UDropInstruction::ExecuteInstruction(APawn* TargetPawn, FString Options)
 {
   if (UKismetSystemLibrary::DoesImplementInterface(TargetPawn, UIDropperActor::StaticClass()))
   {

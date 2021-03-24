@@ -3,7 +3,7 @@
 
 #include "RotateInstruction.h"
 
-bool URotateInstruction::ExecuteInstruction(APawn* TargetPawn)
+bool URotateInstruction::ExecuteInstruction(APawn* TargetPawn, FString Options)
 {
   FRotator newRotation = TargetPawn->GetActorRotation();
   newRotation.Yaw += 90.0f;

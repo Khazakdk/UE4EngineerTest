@@ -10,7 +10,7 @@
 
 const float MINIMUM_LAST_RENDER_TIME = .1f;
 
-bool UDocumentInstruction::ExecuteInstruction(APawn* TargetPawn)
+bool UDocumentInstruction::ExecuteInstruction(APawn* TargetPawn, FString Options)
 {
   if (UKismetSystemLibrary::DoesImplementInterface(TargetPawn, UIGrabberActor::StaticClass()))
   {

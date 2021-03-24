@@ -5,6 +5,19 @@
 #include "CoreMinimal.h"
 #include "RobotInstruction.generated.h"
 
+USTRUCT(BlueprintType)
+struct FOptionsInstruction
+{
+	GENERATED_BODY()
+
+public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TSubclassOf<URobotInstruction> Instruction;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FString Options;
+};
+
 /*  */
 UCLASS(Blueprintable)
 class AIRENGINEERTEST_API URobotInstruction : public UObject
@@ -15,5 +28,5 @@ public:
 	URobotInstruction();	
 
 	UFUNCTION(BlueprintCallable)
-	virtual bool ExecuteInstruction(APawn* TargetPawn);
+	virtual bool ExecuteInstruction(APawn* TargetPawn, FString Options="");
 };
