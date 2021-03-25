@@ -7,7 +7,7 @@
 #include "MoveInstruction.generated.h"
 
 /**
- * Moves the robot 100 units forward when executed
+ * Moves the robot X units forward when executed.  X defaults to 100 or can be provided in the Options argument
  */
 UCLASS()
 class AIRENGINEERTEST_API UMoveInstruction : public URobotInstruction

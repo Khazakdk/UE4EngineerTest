@@ -18,5 +18,5 @@ class AIRENGINEERTEST_API UDocumentInstruction : public URobotInstruction
 	bool ExecuteInstruction(APawn* TargetPawn, FString Options) override;
 
 protected:
-	void CreateReport(TArray<AActor*> actors, int reportNumber);
+	void virtual CreateReport(TArray<AActor*> actors, int reportNumber);
 };

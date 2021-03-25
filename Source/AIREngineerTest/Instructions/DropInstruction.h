@@ -7,7 +7,7 @@
 #include "DropInstruction.generated.h"
 
 /**
- * 
+ * Spawns a instance configurable mesh in front of an actor that implements IDropperActor
  */
 UCLASS()
 class AIRENGINEERTEST_API UDropInstruction : public URobotInstruction

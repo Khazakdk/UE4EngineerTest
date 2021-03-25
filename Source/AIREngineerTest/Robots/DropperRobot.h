@@ -9,7 +9,7 @@
 #include "DropperRobot.generated.h"
 
 /**
- * 
+ * Used in conjuction with DropInstruction.  Provides a place to specifiy the mesh being dropped.
  */
 UCLASS()
 class AIRENGINEERTEST_API ADropperRobot : public ABaseRobot, public IIDropperActor

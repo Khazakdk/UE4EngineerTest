@@ -1,14 +1,15 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Kismet\KismetSystemLibrary.h"
-#include "UnrealClient.h"
-#include "Misc/Paths.h"
-
 #include "DocumentInstruction.h"
 #include "..\Robots\IGrabberActor.h"
 #include "..\Droppables\BaseDroppable.h"
 
+#include "Kismet\KismetSystemLibrary.h"
+#include "UnrealClient.h"
+#include "Misc/Paths.h"
+
 const float MINIMUM_LAST_RENDER_TIME = .1f;
+const float MAXIMUM_DISTANCE_TO_DOCUMENT = 500; // TODO: turn this into a parameter
 
 bool UDocumentInstruction::ExecuteInstruction(APawn* TargetPawn, FString Options)
 {
@@ -26,7 +27,7 @@ bool UDocumentInstruction::ExecuteInstruction(APawn* TargetPawn, FString Options
       }
     }
 
-    if (droppable != nullptr)
+    if (droppable != nullptr && droppable->GetDistanceTo(TargetPawn) < MAXIMUM_DISTANCE_TO_DOCUMENT)
     {
       CreateReport(actorsOnScreen, IIGrabberActor::Execute_GetDocumentCount(TargetPawn));
       droppable->Destroy();

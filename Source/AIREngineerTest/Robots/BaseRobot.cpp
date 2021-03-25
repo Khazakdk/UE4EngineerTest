@@ -9,7 +9,6 @@ ABaseRobot::ABaseRobot()
   this->MovementRate = 100.0;
   this->RobotMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("RobotMesh"));
   this->RootComponent = this->RobotMesh;
-  //this->RobotController = CreateDefaultSubobject<AAIController>(TEXT("RobotController"));
 }
 
 void ABaseRobot::BeginPlay()
@@ -25,7 +24,6 @@ void ABaseRobot::WalkForward()
   robotLocation.Y += (forwardVector.Y * 100);
 
   this->SetActorLocation(robotLocation);
-  //this->RobotController->MoveToLocation(robotLocation, 5.0f);
 }
 
 void ABaseRobot::RunInstructions()

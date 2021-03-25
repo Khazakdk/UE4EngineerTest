@@ -3,7 +3,9 @@
 
 #include "GrabberRobot.h"
 
+int AGrabberRobot::DocumentCount = 1;
+
 int AGrabberRobot::GetDocumentCount_Implementation()
 {
-  return this->DocumentCount++;
+  return AGrabberRobot::DocumentCount++;
 }

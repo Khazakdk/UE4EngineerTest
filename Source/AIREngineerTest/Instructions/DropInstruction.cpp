@@ -11,7 +11,7 @@ bool UDropInstruction::ExecuteInstruction(APawn* TargetPawn, FString Options)
   {
     FVector location(TargetPawn->GetActorLocation());
     FVector forwardVector = TargetPawn->GetActorForwardVector();
-    // Flip the x and y components from the forward vector so the visuals make sense
+    // Flip the x and y components from the forward vector so the visuals of the sample skeletal mesh make sense
     location.Y += forwardVector.X * 100;
     location.X += forwardVector.Y * 100;
     FRotator rotation(TargetPawn->GetActorRotation());
@@ -20,9 +20,7 @@ bool UDropInstruction::ExecuteInstruction(APawn* TargetPawn, FString Options)
     GetWorld()->SpawnActor<ABaseDroppable>(IIDropperActor::Execute_GetDroppable(TargetPawn), location, rotation, SpawnInfo);
     return true;
   }
-  else
-  {
-    UE_LOG(LogTemp, Error, TEXT("Tried to execute drop sphere on actor that does not implement IDropperActor, skipping"));
-    return false;
-  }
+
+  UE_LOG(LogTemp, Error, TEXT("Tried to execute drop sphere on actor that does not implement IDropperActor, skipping"));
+  return false;
 }

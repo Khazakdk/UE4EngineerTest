@@ -8,7 +8,7 @@
 #include "GrabberRobot.generated.h"
 
 /**
- * 
+ * Used in conjunction with DocumentInstruction.  Tracks the number of documents produced.
  */
 UCLASS()
 class AIRENGINEERTEST_API AGrabberRobot : public ABaseRobot, public IIGrabberActor
@@ -16,9 +16,9 @@ class AIRENGINEERTEST_API AGrabberRobot : public ABaseRobot, public IIGrabberAct
 	GENERATED_BODY()
 
 public:
+
 	virtual int GetDocumentCount_Implementation() override;
 
-	UPROPERTY(BlueprintReadOnly)
-	int DocumentCount = 1;
+	static int DocumentCount;
 	
 };

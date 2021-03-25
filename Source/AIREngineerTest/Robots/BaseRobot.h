@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "AIController.h"
 #include "..\RobotInstruction.h"
 #include "BaseRobot.generated.h"
 
@@ -34,11 +33,4 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	void RunInstructions();
-
-
-	// Disabling and using set actor location for now
-	//UPROPERTY()
-	//AAIController* RobotController;
-
-
 };
